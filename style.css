@@ -1,0 +1,340 @@
+:root {
+    --button: #FF0000;
+    --main-background:  #C4C4C4;
+    --background: #E5E5E5;
+    --text: #000;
+    --footer: #000;
+    --text-description: #9C9696;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    color: var(--text);
+    background-color: var(--background);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    position: fixed;
+    width: 100vw;
+    background-color: transparent;
+    text-transform: uppercase;
+    z-index: 5;
+}
+
+header nav{
+    background-color: transparent;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3.9rem 6rem 0rem;
+
+}
+
+header nav a{
+    font-size: 2.4rem;
+    font-weight: 700;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+header nav a img{
+    background-color: transparent;
+}
+
+.search{
+    display: flex;
+    height: 4.5rem;
+    width: 22rem;
+    align-items: center;
+}
+
+.search::before{
+    width: 2.4rem;
+    height: 2.4rem;
+    content: url("./assets/icon-search.svg");
+    background-size: cover;
+    padding-left: 1.3rem;
+}
+
+.search input{
+    height: 100%;
+    width: 100%;
+    font-size: 2.8rem;
+    padding-left: 0.5rem;
+    box-shadow:none ;
+    border: none;
+    outline: none;
+}
+
+.nav_background{
+    width: 100vw;
+    height: 12rem;
+    display: flex;
+    position: fixed;
+}
+
+.nav_background__left{
+    flex: 1;
+    height: 100%;
+    padding-left: 11.1rem;
+    padding-right: 7.2rem;
+}
+
+.nav_background__right{
+    flex: 1.7;
+    height: 100%;
+    background-color: var(--main-background);
+}
+
+section{
+    flex: 5.5;
+    display: flex;
+}
+
+aside{
+    flex: 1;
+    padding-left: 11.1rem;
+    padding-right: 7.2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+aside h1{
+    font-size: 6rem;
+    padding-top: 10.3rem;
+    margin-bottom: 2.1rem;
+    font-weight: 700;
+}
+
+aside p{
+    font-size: 1.6rem;
+    color: var(--text-description);
+    margin-bottom: 2.1rem;
+    font-weight: 700;
+}
+
+aside h2{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+aside button{
+    color: var(--background);
+    background-color: var(--button);
+
+    width: 27.4rem;
+    height: 9rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+main{
+    flex: 1.7;
+    padding-top: 12rem;
+    background-color: var(--main-background);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.zoom_image{
+    background-color: var(--main-background);
+    background-image: url('./assets/tenis-1-ampliado.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    flex: 3;
+}
+
+.thumbnails{
+    background-color: var(--main-background);
+    flex: 1;
+    display: flex;
+    padding: 0rem 4rem 2rem 4rem;
+    gap: 6rem;
+    
+}
+
+.thumbnails div{
+    flex: 1;
+    background-color: var(--main-background);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+.thumbnails :nth-child(1){
+    background-image: url('./assets/tenis-1-galeria.png');
+    background-color: white;
+}
+
+.thumbnails :nth-child(2){
+    background-image: url('./assets/tenis-2-galeria.png');
+    background-color: white;
+}
+
+.thumbnails :nth-child(3){
+    background-image: url('./assets/tenis-3-galeria.png');
+    background-color: white;
+    background-position: right;
+}
+
+.active{
+    border-bottom: 4px solid red;
+}
+
+footer{
+    flex: 1;
+}
+
+footer ul{
+    width: 100vw;
+    display: flex;
+    list-style: none;
+}
+
+footer ul li{
+    flex: 1;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+footer ul li a{
+    flex: 1;
+    align-self: center;
+    justify-self: center;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+footer ul li:first-child{
+    width: 25rem;
+}
+
+footer ul li iframe{
+    width: 100%;
+}
+
+footer ul li:last-child{
+    flex: 2;
+    background-color: var(--text);
+}
+
+footer ul li:last-child a{
+    color: var(--background);
+    background-color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul li:last-child a::after{
+    width: 2.4rem;
+    height: 2.4rem;
+    content: url("./assets/icon-arrow.svg");
+    background-size: cover;
+    margin-left: 1.4rem;
+}
+
+@media only screen and (max-width: 920px) {
+    body{
+        height: 300vh;
+        
+    }
+    
+    header nav {
+        background-color: var(--background);
+        padding: 2rem 3rem 1rem;
+    }
+
+    header nav :nth-child(2),
+    header nav :nth-child(3),
+    header nav :nth-child(4),
+    header nav :nth-child(5) {
+        visibility: hidden;
+        width: 0px;
+    }
+    
+    header nav :nth-child(2),
+    header nav :nth-child(3){
+        order: 2;
+    }
+
+    header nav a:last-child {
+        order: 3;
+    }
+
+    .nav_background{
+        visibility: hidden;
+    }
+
+    section{
+        flex-direction: column;
+    }
+    
+    aside{
+        height: 100vh;
+        padding: 3rem 6rem 6rem;
+    }
+
+    aside h1{
+        padding-top: 3rem;
+    }
+
+    main{
+        height: 100vh;
+        padding: 0rem 3rem 0rem;
+    }
+
+    main .zoom_image{
+        flex: 1;
+    }
+
+    main .thumbnails{
+        flex: 1;
+        flex-direction: column;
+        padding-bottom: 6rem;
+    }
+
+    footer ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer ul li{
+        flex: 2;
+        padding: 4rem;
+    }
+
+    footer ul li:first-child{
+        padding: 6rem 6rem 0rem;
+        width: 100%;
+        flex: 3;
+    }
+
+    footer ul li:last-child{
+        width: 100vw;
+    }
+}
